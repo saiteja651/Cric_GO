@@ -18,7 +18,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah', 'Mohali', 'Bengaluru']
 st.title("IPL MATCH PREDICTION")
-pipe=pickle.load(open("ipl.pkl","rb"))
+pipe=pickle.load(open("iplprediction.pkl","rb"))
 col1,col2=st.columns(2)
 with col1:
     batting_team=st.selectbox("Select the batting team",teams)
