@@ -42,8 +42,8 @@ if st.button("predict Probabibilty"):
     crr = score / overs
     rrr = (runs_left * 6) / balls_left
     input_df = pd.DataFrame({'batting_team': [batting_team], 'bowling_team': [bowling_team], 'city': [city],
-                             'runs_left': [runs_left], 'balls_left': [balls_left], 'wickets': [wickets],
-                             'total_runs_x': [target], 'crr': [crr], 'rrr': [rrr]})
+                             'runs_left': [runs_left], 'balls_left': [balls_left], 'wik_left': [wickets],
+                             'total_runs_x': [target], 'currate': [crr], 'runrate': [rrr]})
     result = pipe.predict_proba(input_df)
     loss = result[0][0]
     win = result[0][1]
